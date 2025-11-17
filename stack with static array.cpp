@@ -2,13 +2,12 @@
 #include <stdexcept>
 using namespace std;
 
-// Define the maximum capacity
 const int MAX_SIZE = 100;
 
 class StaticStack {
 private:
     int data[MAX_SIZE];
-    int top_index; // Index of the top element
+    int top_index; 
 
 public:
     StaticStack() : top_index(-1) {}
@@ -21,21 +20,21 @@ public:
         if (full()) {
             throw overflow_error("Stack overflow: Cannot push, stack is full.");
         }
-        data[++top_index] = n; // O(1)
+        data[++top_index] = n; 
     }
 
     int pop() {
         if (empty()) {
             throw out_of_range("Pop on empty stack");
         }
-        return data[top_index--]; // O(1)
+        return data[top_index--]; 
     }
 
     int top() const {
         if (empty()) {
             throw out_of_range("Top on empty stack");
         }
-        return data[top_index]; // O(1)
+        return data[top_index];
     }
 
     void display() const {
@@ -52,9 +51,9 @@ int main() {
      StaticStack s;
      s.push(10);
      s.push(20);
-     s.display(); // TOP -> 20 -> 10 -> BOTTOM
-     cout << "Top: " << s.top() << endl; // 20
-     cout << "Popped: " << s.pop() << endl; // 20
-     s.display(); // TOP -> 10 -> BOTTOM
+     s.display(); 
+     cout << "Top: " << s.top() << endl;
+     cout << "Popped: " << s.pop() << endl; 
+     s.display(); 
      return 0;
 }
