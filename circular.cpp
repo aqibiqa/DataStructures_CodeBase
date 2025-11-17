@@ -234,23 +234,23 @@ int main() {
     lst.push_end(50);
     lst.display(); 
 
-    cout << "\nFront element: " << lst.front() << endl; // 30
-    cout << "End element: " << lst.end() << endl;     // 50
-    cout << "Size: " << lst.size() << endl;           // 5
+    cout << "\nFront element: " << lst.front() << endl; 
+    cout << "End element: " << lst.end() << endl;     
+    cout << "Size: " << lst.size() << endl;           
 
-    cout << "\nPopping front: " << lst.pop_front() << endl; // 30
+    cout << "\nPopping front: " << lst.pop_front() << endl; 
     lst.display();
 
-    cout << "\nPopping end: " << lst.pop_end() << endl; // 50
+    cout << "\nPopping end: " << lst.pop_end() << endl; 
     lst.display();
 
-    cout << "\nPopping end: " << lst.pop_end() << endl; // 40
+    cout << "\nPopping end: " << lst.pop_end() << endl; 
     lst.display();
 
-    cout << "\nPopping front: " << lst.pop_front() << endl; // 20
+    cout << "\nPopping front: " << lst.pop_front() << endl; 
     lst.display();
 
-    cout << "\nPopping end: " << lst.pop_end() << endl; // 10
+    cout << "\nPopping end: " << lst.pop_end() << endl; 
     lst.display();
 
     cout << "\nProgram finished successfully.\n";
