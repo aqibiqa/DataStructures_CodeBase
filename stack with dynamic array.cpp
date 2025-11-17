@@ -6,7 +6,7 @@ class DynamicStack {
 private:
     int* data;
     int capacity;
-    int top_index; // Index of the top element
+    int top_index; 
 
     void resize() {
         int new_capacity = (capacity == 0) ? 1 : capacity * 2;
@@ -30,7 +30,7 @@ public:
 
     void push(int n) {
         if (size() == capacity) {
-            resize(); // Amortized O(1)
+            resize(); 
         }
         data[++top_index] = n;
     }
@@ -39,14 +39,14 @@ public:
         if (empty()) {
             throw out_of_range("Pop on empty stack");
         }
-        return data[top_index--]; // O(1)
+        return data[top_index--]; 
     }
 
     int top() const {
         if (empty()) {
             throw out_of_range("Top on empty stack");
         }
-        return data[top_index]; // O(1)
+        return data[top_index]; 
     }
 
     void display() const {
@@ -64,8 +64,8 @@ int main() {
      s.push(1);
      s.push(2);
      s.push(3);
-     s.display(); // TOP -> 3 -> 2 -> 1 -> BOTTOM
-     cout << "Popped: " << s.pop() << endl; // 3
-     s.display(); // TOP -> 2 -> 1 -> BOTTOM
+     s.display(); 
+     cout << "Popped: " << s.pop() << endl; 
+     s.display(); 
      return 0;
 }
